@@ -30,7 +30,6 @@ namespace PrimalEditor.Editors
             Loaded -= OnWorldEditorViewLoaded;
             Focus();
 
-            ((INotifyCollectionChanged)GameProject.Project.UndoRedo.UndoList).CollectionChanged += (s, e) => Focus();
    
         }
     }

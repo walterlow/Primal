@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PrimalEditor.Editors"
              xmlns:utils="clr-namespace:PrimalEditor.Utilities"
+             xmlns:controls="clr-namespace:PrimalEditor.Utilities.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              Focusable="True">
@@ -32,6 +33,25 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
+                <Border Background="{StaticResource Editor.Selected.BackgroundBrush}">
+                    <StackPanel VerticalAlignment="Center">
+                        <controls:NumberBox VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                        Value="0" Multiplier="100"
+                                        Foreground="{StaticResource Editor.FontBrush}" />
+
+                        <controls:ScalarBox Value="10" Multiplier="10" />
+
+
+                        <controls:VectorBox X="0" Y="0" Z="0" W="0" Orientation="Horizontal" VectorType="Vector2" />
+                        <controls:VectorBox X="0" Y="0" Z="0" W="0" Orientation="Horizontal" VectorType="Vector3" />
+                        <controls:VectorBox X="0" Y="0" Z="0" W="0" Orientation="Horizontal" VectorType="Vector4" />
+                        
+                        <controls:VectorBox X="0" Y="0" Z="0" W="0" Orientation="Vertical" VectorType="Vector2" />
+                        <controls:VectorBox X="0" Y="0" Z="0" W="0" Orientation="Vertical" VectorType="Vector3" />
+                        <controls:VectorBox X="0" Y="0" Z="0" W="0" Orientation="Vertical" VectorType="Vector4" />
+
+                    </StackPanel>
+                </Border>
                 <GridSplitter Grid.Row="1" Height="5" VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="Transparent"/>
                 <TabControl Grid.Row="1" Background="{StaticResource Editor.Window.GrayBrush2}" Margin="0,5,0,0">
                     <TabItem Header="History">
