@@ -66,8 +66,7 @@ namespace PrimalEditor.Editors
 
         private void OnName_TextBox_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            var vm = DataContext as MSEntity;
-            var selection = vm.SelectedEntities.Select(entity => (entity, entity.Name)).ToList();
+            _propertyName = string.Empty;
             _undoAction = GetRenameAction();
         }
 
